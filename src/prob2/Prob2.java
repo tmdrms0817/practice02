@@ -9,14 +9,22 @@ public class Prob2 {
 
 		int[] intArray = new int[5];
 		double sum = 0;
+		int i = 1;
+		int total =0;
 
-		/* 키보드에서 배열 크기만큼 입력 받아 배열에 저장하는 코드 */
-
-		/* 배열에 저장된 정수 값 더하기 */
-
-		/* 출력 */
-		
-		/* 자원정리 */
-		scanner.close();
+		try {
+			while (scanner.hasNext()) {
+				i++;
+				total+=Integer.parseInt(scanner.next());
+				
+				if (i > 5) {
+					float a = total/5;
+					System.out.println("평균값은 ="+a);
+					scanner.close();
+				}
+			}
+		} catch (Exception e) {
+			
+		}
 	}
 }
